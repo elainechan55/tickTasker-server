@@ -25,6 +25,8 @@ account.
   - This is done when I see the task created.
 - As a user, I want to be able to interact with the tasks by completing them.
   - This is done when I am able to 'tick' a task checkbox and see the change.
+- As a user, I want to be able to delete tasks.
+  - This is done when I am able to delete a task and visually see the change.
 - As a user, I want to be able to sign-out.
   - This is done when I am no longer signed-in to my user after clicking the sign-
   out button and the page is set to show sign-in form fields.
