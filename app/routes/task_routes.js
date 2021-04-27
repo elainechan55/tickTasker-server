@@ -88,8 +88,16 @@ router.patch('/tasks/:id', requireToken, removeBlanks, (req, res, next) => {
       // pass the result of Mongoose's `.update` to the next `.then`
       return task.updateOne(req.body.task)
     })
-    // if that succeeded, return 204 and no JSON
-    .then(() => res.sendStatus(204))
+    .then((updateResult) =>
+      Task.findById(taskId)
+        .then((task) => res.status(200).json({task: task.toObject()}))
+    )
+    // .then(async (task) => {
+    //   let taskAsync = await Task.findById(taskId)
+    //   console.log(taskAsync)
+    //   console.log(task)
+    //   res.status(200).json({ task: taskAsync.toObject() })
+    // })
     // if an error occurs, pass it to the handler
     .catch(next)
 })
