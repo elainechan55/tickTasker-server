@@ -46,6 +46,7 @@ router.post('/tasks', requireToken, (req, res, next) => {
 // Index tasks (see all tasks)
 // GET /tasks
 router.get('/tasks', requireToken, (req, res, next) => {
+  // Task.find({ owner: req.user })
   Task.find()
     .then(tasks => {
       // `tasks` will be an array of Mongoose documents

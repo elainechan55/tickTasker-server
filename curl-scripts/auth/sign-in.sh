@@ -1,7 +1,7 @@
 #!/bin/bash
 # EMAIL="abc@123.com" PASSWORD="123" sh curl-scripts/auth/sign-in.sh
 
-API="http://localhost:4741"
+API="https://tick-tasker.herokuapp.com"
 URL_PATH="/sign-in"
 
 curl "${API}${URL_PATH}" \
