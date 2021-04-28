@@ -46,8 +46,8 @@ router.post('/tasks', requireToken, (req, res, next) => {
 // Index tasks (see all tasks)
 // GET /tasks
 router.get('/tasks', requireToken, (req, res, next) => {
-  // Task.find({ owner: req.user })
-  Task.find()
+  Task.find({ owner: req.user })
+  // Task.find()
     .then(tasks => {
       // `tasks` will be an array of Mongoose documents
       // convert each task to a POJO (`.map` to apply `.toObject` to each)
