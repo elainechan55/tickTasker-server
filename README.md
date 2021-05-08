@@ -26,8 +26,10 @@ and Mongoose to connect to MongoDB to view and track user tasks.
 
 ### Technologies Used
 - jQuery
-- HTML/CSS
 - Javascript
+- Express
+- Mongoose
+- MongoDB
 
 ### Entity Relationship Diagram
 ![TickTasker Entity Relationship Diagram](/tickTaskerERD.jpg)
