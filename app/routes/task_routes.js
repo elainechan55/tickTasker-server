@@ -93,12 +93,6 @@ router.patch('/tasks/:id', requireToken, removeBlanks, (req, res, next) => {
       Task.findById(taskId)
         .then((task) => res.status(200).json({task: task.toObject()}))
     )
-    // .then(async (task) => {
-    //   let taskAsync = await Task.findById(taskId)
-    //   console.log(taskAsync)
-    //   console.log(task)
-    //   res.status(200).json({ task: taskAsync.toObject() })
-    // })
     // if an error occurs, pass it to the handler
     .catch(next)
 })
